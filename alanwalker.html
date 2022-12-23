@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MinhBui</title>
+</head>
+
+<style>
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#background {
+    position: relative;
+    background-image: url("alanwalker.png"); /* The image used */
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 740px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+   
+    html {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+   
+    /*
+    1. tu ngoai vao trong
+    2. tu tren xuong duoi
+    3. tong quan den chi tiet
+    */
+    /*
+    1. vi tri
+    2. kich thuoc 'with, height)
+    3. mau sac
+    4.kieu dang (kieu chu, tron, vuong,...)
+    */
+   
+    #main {
+   
+    }
+   
+    #nav {
+        display: inline-block;
+    }
+   
+    #header {
+        height: 740px;
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+   
+    #nav, .subnav {
+        list-style-type: none;
+    }
+   
+    #nav > li {
+        display: inline-block;
+    }
+   
+    #nav li {
+        position: relative;
+    }
+   
+    #nav > li > a { /*more*/
+        color: rgb(0, 0, 0);
+        text-transform: uppercase; /*in hoa*/
+    }
+   
+    #nav li a {
+       
+        text-decoration: none;
+        line-height: 46px;
+        padding: 0 24px;
+        display: block;
+    }
+   
+    #nav li:hover .subnav {
+        display: block; /* inline-block cung duoc*/
+    }
+   
+    /*#nav .subnav li:hover a ,*/
+    #nav > li:hover > a {
+        color: #000;
+        background-color: rgba(red, green, blue, 1);
+    }
+   
+    #nav .subnav {
+        display: none;
+        position: absolute;
+        top: 100%; /* chieu cao cua more*/
+        left: 0; /* goc ben trai thua more "the #nav .subnav li:hover a"*/
+        min-width: 160px; /*chieu ngang toi thieu */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* bong do o vien */
+    }
+   
+    #nav .subnav a {
+        color: #000;
+        padding: 0 16px;
+        line-height: 38px;
+    }
+   
+    #nav .nav-arrow-down {
+        font-size: 10px;
+    }
+   
+    /*#header .search-btn {
+        float: right;
+        padding: 0 21px;
+    }
+   
+    #header .search-btn:hover {
+        cursor: pointer; /*bien con tro chuot thanh hinh ban tay select*/
+     /*   background-color: #f44336;
+    }
+   
+    #header .search-btn .search-icon {
+        color: #fff;
+        font-size: 16px;
+        line-height: 46px;
+    }
+   
+    /*----------------------------------------------------------------*/
+   
+</style>
+
+<body>
+    
+<div id="container">
+
+    <div id="background">
+        <div>
+            <div id="main">
+                <div id="header">
+                    <!-- begin: nav -->
+                    <ul id="nav">
+                        <li>
+                            <a href="#"
+                            style="
+                                position: relative;
+                                top: 578px;
+                                right: -639px;
+                                width: 193px;
+                                height: 40px;
+                                background-color: none;">
+                            </a>
+                                <ul class="subnav">
+                                    <li><a href="" style="
+                                        position: absolute;
+                                        top: 20px;
+                                        right: -985px;"><img width="416" src="https://imgs.search.brave.com/N0wvLjl7LTb5eTgnUlvUHfwhetdZB9u2W300r767qBE/rs:fit:400:600:1/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzg2LzZl/LzcyLzg2NmU3MmUy/ZWU3OWZjODc3MDhl/N2EyZTk3MWJkZDNl/LmpwZw" alt=""
+                                        style="
+                                        justify-content: center;">
+                                        </a></li>
+                                </ul>
+                        </li>
+                        <li>
+                            <a href="#"
+                            style="
+                            position: relative;
+                            top: 417px;
+                            right: -743px;
+                            width: 154px;
+                            height: 40px;
+                            background-color: none;">
+                            </a>
+                                <ul class="subnav">
+                                    <li><a href=""
+                                        style="
+                                        position: absolute;
+                                        top: 66px;
+                                        right: -900px;"><img width="1000" src="https://imgs.search.brave.com/xM476kJp-8VRWaKZtUQ3GvCllu2hbK8rIcwCTUsmLrc/rs:fit:1200:630:1/g:ce/aHR0cHM6Ly9yZXMu/Y2xvdWRpbmFyeS5j/b20vdGVlcHVibGlj/L2ltYWdlL3ByaXZh/dGUvcy0tcWRTQjRn/UlQtLS90X1ByZXZp/ZXcvYl9yZ2I6MTkx/OTE5LGNfbHBhZCxm/X2pwZyxoXzYzMCxx/XzkwLHdfMTIwMC92/MTUzODA0MDY2OS9w/cm9kdWN0aW9uL2Rl/c2lnbnMvMzIyMTEw/Nl8wLmpwZw" alt=""
+                                        style="
+                                        justify-content: center;">
+                                        </a></li>
+                                </ul>
+                        </li>
+                        <li>
+                            <a href="#"
+                            style="
+                            position: relative;
+                            top: 319px;
+                            right: -588px;
+                            width: 96px;
+                            height: 40px;
+                            background-color: none;">
+                            </a>
+                                <ul class="subnav">
+                                    <li><a href=""
+                                        style="
+                                        position: absolute;
+                                        top: -10px;
+                                        right: -580px;"><img width="600" src="store.png " alt=""
+                                        style="
+                                        justify-content: center;">
+                                        <img width="600" src="store02.png" alt=""
+                                        style="
+                                        justify-content: center;">
+                                        </a></li>
+                                </ul>
+                        </li>
+                        <li>
+                            <a href="#"
+                            style="
+                            position: relative;
+                            top: 372px;
+                            right: 57px;
+                            width: 154px;
+                            height: 40px;
+                            background-color: none;">
+                            </a>
+                                <ul class="subnav">
+                                    <li><a href=""
+                                        style="
+                                        position: absolute;
+                                        top: 66px;
+                                        right: -898px;"><img width="450" src="https://imgs.search.brave.com/zBbMXOog9CMPCmfr6upVOUXEXmjgQKkcdDj6pA7UVLk/rs:fit:640:640:1/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzZhL2Zl/LzUyLzZhZmU1MjBi/NDY3NmQzOWViN2Qz/OWQ5MWU5MDYwZjFl/LmpwZw" alt=""
+                                        style="
+                                        justify-content: center;">
+                                        <img width="550" src="https://imgs.search.brave.com/g-OEdGlEX0swcn9d6G06ejIf4l-foSFVXPxVDfl-S1s/rs:fit:800:523:1/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzRjLzEz/LzQ5LzRjMTM0OTcw/NjkyMmE4MGYwMzQz/Y2YyYTUxNjFhNTlk/LmpwZw" alt=""
+                                        style="
+                                        justify-content: center;">
+                                        </a></li>
+                                </ul>
+                        </li>
+                        <li>
+                            <a href="#"
+                            style="
+                                position: relative;
+                                top: 67px;
+                                right: -21px;
+                                width: 248px;
+                                height: 40px;
+                                background-color: none;">
+                            </a>
+                                <ul class="subnav">
+                                    <li><a href=""
+                                        style="
+                                        position: absolute;
+                                        top: 50px;
+                                        right: -546px;"><img width="1000" src="https://imgs.search.brave.com/Se6X7uJb9mzts2TJgYfG1NM4q8cMqQybdlazLxN41s4/rs:fit:960:540:1/g:ce/aHR0cHM6Ly9pbnNw/aXJpbmdtdXNpY3Zp/ZGVvcy5maWxlcy53/b3JkcHJlc3MuY29t/LzIwMTcvMDIvMjAx/NzAyMTV3MTEzNC15/b3UtYXJlLW5vdC1h/bG9uZS1hbGFuLXdh/bGtlci05NjB4NTQw/LmpwZz93PTk2MA" alt=""
+                                        style="
+                                        justify-content: center;">
+                                        </a></li>
+                                </ul>
+                        </li>
+                        <li>
+                            <a href="#"
+                            style="
+                                    position: relative;
+                                    top: 134px;
+                                    right: -74px;
+                                    width: 196px;
+                                    height: 40px;
+                                    background-color: none;">
+                            </a>
+                                <ul class="subnav">
+                                    <li><a href=""
+                                        style="
+                                        position: absolute;
+                                        top: 26px;
+                                        right: 200px;"><img width="500" src="https://www.tunexlife.com/imgs/eFZXczB0aTBKOTA=.jpg" alt=""
+                                        style="
+                                        justify-content: center;">
+                                        <img width="500" src="https://imgs.search.brave.com/THNH-N9oLNd6OGK4ME3N3s6_ZOG3WjAGNGfAnCtFdds/rs:fit:1108:738:1/g:ce/aHR0cHM6Ly9jZG4u/dWMuYXNzZXRzLnBy/ZXpseS5jb20vOTU0/MWZhZGEtZTc4OC00/ZWEwLThkNDYtN2Fk/YjNkYTJiYTczLy0v/cmVzaXplLzExMDh4/Ly0vcXVhbGl0eS9i/ZXN0Ly0vZm9ybWF0/L2F1dG8v" alt=""
+                                        style="
+                                        justify-content: center;">
+                                        </a></li>
+                                </ul>
+                        </li>
+                        <li>
+                            <a href="galaxy.html"
+                            style="
+                                        position: relative;
+                                        top: 315px;
+                                        right: 403px;
+                                        width: 206px;
+                                        height: 40px;
+                                        background-color: none;">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+</body>
+</html>
